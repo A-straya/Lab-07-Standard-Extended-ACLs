@@ -1,0 +1,48 @@
+LAB 07 — IP ADDRESSING PLAN
+============================
+
+LAN 1
+Network: 192.168.10.0/24
+Gateway: 192.168.10.1
+
+PC1
+IP Address: 192.168.10.10
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.10.1
+
+PC2
+IP Address: 192.168.10.20
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.10.1
+
+
+R1
+G0/0: 192.168.10.1/24
+G0/1: 10.0.0.1/30
+
+
+ROUTER-TO-ROUTER LINK
+Network: 10.0.0.0/30
+
+R1 G0/1: 10.0.0.1
+R2 G0/1: 10.0.0.2
+
+
+LAN 2
+Network: 192.168.20.0/24
+Gateway: 192.168.20.1
+
+PC3
+IP Address: 192.168.20.10
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.20.1
+
+PC4
+IP Address: 192.168.20.20
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.20.1
+
+
+R2
+G0/0: 192.168.20.1/24
+G0/1: 10.0.0.2/30
