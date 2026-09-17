@@ -1,0 +1,47 @@
+!
+! LAB 07 - R1
+! Standard & Extended ACLs
+!
+
+enable
+configure terminal
+
+hostname R1
+
+!
+! LAN 1
+!
+interface g0/0
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+ exit
+
+!
+! Router-to-router connection
+!
+interface g0/1
+ ip address 10.0.0.1 255.255.255.252
+ no shutdown
+ exit
+
+!
+! Route to LAN 2
+!
+ip route 192.168.20.0 255.255.255.0 10.0.0.2
+
+!
+! Standard ACL
+! Block PC1 from reaching LAN 2
+!
+access-list 10 deny host 192.168.10.10
+access-list 10 permit any
+
+!
+! Apply Standard ACL
+!
+interface g0/1
+ ip access-group 10 out
+ exit
+
+end
+write memory
