@@ -74,4 +74,20 @@ By completing this lab, you will learn how to:
           ┌─────┴─────┐
           │            │
          PC3          PC4
-    192.168.20.10  192.168.20.20    
+    192.168.20.10  192.168.20.20
+
+
+
+## Key Concepts
+
+### Standard ACL
+
+Standard ACLs primarily filter traffic based on the source IP address.
+
+Example:
+
+```cisco
+access-list 10 deny host 192.168.10.10
+access-list 10 permit any
+
+
