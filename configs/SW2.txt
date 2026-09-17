@@ -1,0 +1,11 @@
+!
+! LAB 07 - SW2
+!
+
+enable
+configure terminal
+
+hostname SW2
+
+end
+write memory
