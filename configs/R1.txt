@@ -45,3 +45,37 @@ interface g0/1
 
 end
 write memory
+
+
+
+!
+! REMOVE STANDARD ACL
+!
+
+configure terminal
+
+interface g0/1
+ no ip access-group 10 out
+ exit
+
+no access-list 10
+
+!
+! EXTENDED ACL
+! Block PC1 from accessing HTTP on PC3
+!
+
+access-list 100 deny tcp host 192.168.10.10 host 192.168.20.10 eq 80
+access-list 100 permit ip any any
+
+!
+! Apply Extended ACL
+!
+
+interface g0/1
+ ip access-group 100 out
+ exit
+
+end
+write memory
+
