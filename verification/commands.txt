@@ -1,0 +1,66 @@
+LAB 07 — VERIFICATION COMMANDS
+==============================
+
+
+1. CHECK INTERFACES
+-------------------
+
+show ip interface brief
+
+Purpose:
+Check interface status and IP addresses.
+
+
+2. CHECK ROUTING TABLE
+----------------------
+
+show ip route
+
+Purpose:
+Verify connected and static routes.
+
+
+3. CHECK RUNNING CONFIGURATION
+------------------------------
+
+show running-config
+
+Purpose:
+Display the current configuration.
+
+
+4. CHECK STANDARD / EXTENDED ACL
+---------------------------------
+
+show access-lists
+
+Purpose:
+Display ACL rules and packet match counters.
+
+
+5. CHECK ACL APPLIED TO INTERFACE
+---------------------------------
+
+show ip interface g0/1
+
+Purpose:
+Verify which ACL is applied and whether it is inbound or outbound.
+
+
+6. TEST CONNECTIVITY
+--------------------
+
+ping 192.168.20.10
+ping 192.168.20.20
+
+Purpose:
+Verify connectivity between LAN 1 and LAN 2.
+
+
+7. TRACE THE PATH
+-----------------
+
+traceroute 192.168.20.10
+
+Purpose:
+See the path packets take through the network.
