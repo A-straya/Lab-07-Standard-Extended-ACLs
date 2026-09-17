@@ -1,0 +1,33 @@
+!
+! LAB 07 - R2
+! Standard & Extended ACLs
+!
+
+enable
+configure terminal
+
+hostname R2
+
+!
+! LAN 2
+!
+interface g0/0
+ ip address 192.168.20.1 255.255.255.0
+ no shutdown
+ exit
+
+!
+! Router-to-router connection
+!
+interface g0/1
+ ip address 10.0.0.2 255.255.255.252
+ no shutdown
+ exit
+
+!
+! Route to LAN 1
+!
+ip route 192.168.10.0 255.255.255.0 10.0.0.1
+
+end
+write memory
